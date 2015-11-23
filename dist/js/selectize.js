@@ -145,7 +145,7 @@
 	 * @returns {string|null}
 	 */
 	var hash_key = function(value) {
-		if (typeof value === 'undefined' || value === null) return null;
+		if (typeof value === 'undefined') return null;
 		if (typeof value === 'boolean') return value ? '1' : '0';
 		return value + '';
 	};
@@ -1874,7 +1874,7 @@
 				var self = this;
 				var inputMode = self.settings.mode;
 				var i, active, value_next, wasFull;
-				value = hash_key(value);
+				value = value === 'null' ? null : hash_key(value);
 	
 				if (self.items.indexOf(value) !== -1) {
 					if (inputMode === 'single') self.close();

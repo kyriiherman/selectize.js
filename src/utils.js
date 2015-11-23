@@ -25,7 +25,7 @@ var isset = function(object) {
  * @returns {string|null}
  */
 var hash_key = function(value) {
-	if (typeof value === 'undefined' || value === null) return null;
+	if (typeof value === 'undefined') return null;
 	if (typeof value === 'boolean') return value ? '1' : '0';
 	return value + '';
 };
