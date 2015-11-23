@@ -1428,7 +1428,7 @@ $.extend(Selectize.prototype, {
 			var self = this;
 			var inputMode = self.settings.mode;
 			var i, active, value_next, wasFull;
-			value = value === 'null' ? null : hash_key(value);
+			value = hash_key(value);
 
 			if (self.items.indexOf(value) !== -1) {
 				if (inputMode === 'single') self.close();
