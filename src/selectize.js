@@ -1783,7 +1783,7 @@ $.extend(Selectize.prototype, {
 	deleteSelection: function(e) {
 		var i, n, direction, selection, values, caret, option_select, $option_select, $tail;
 		var self = this;
-
+		return;
 		direction = (e && e.keyCode === KEY_BACKSPACE) ? -1 : 1;
 		selection = getSelection(self.$control_input[0]);
 
